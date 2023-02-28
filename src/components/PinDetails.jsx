@@ -59,11 +59,11 @@ export default function pinDetails({ user }) {
   return (
     <>
       <div className="flex lg:flex-row flex-col m-auto bg-white rounded-[30px] lg:max-w-7xl mt-10">
-        <div className="flex justify-center items-center md:items-start flex-intial lg:w-3/5">
+        <div className="flex justify-center items-center md:items-start flex-intial">
           <img
             src={pinDetail?.image && urlFor(pinDetail.image)}
             alt="pinImage"
-            className="rounded-3xl xl:h-[70vh]"
+            className="rounded-3xl max-h-72"
           />
         </div>
         <div className="w-full p-5 flex-1 relative">
@@ -89,7 +89,7 @@ export default function pinDetails({ user }) {
             <p className="text-xl mt-5">{pinDetail.about}</p>
           </div>
           <Link
-            className="flex items-center gap-2 mt-5 lg:absolute lg:bottom-2 lg:right-8 "
+            className="flex items-center gap-2 mt-5"
             to={`/user/${user._id}`}
           >
             <img
