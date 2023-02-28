@@ -55,7 +55,7 @@ export default function Pin({ pin: { postedBy, image, _id, save } }) {
     <div className="m-2">
       <div className="relative" onClick={() => navigate(`/pinDetails/${_id}`)}>
         <img
-          src={urlFor(image).width(250).url()}
+          src={urlFor(image).url()}
           alt="pin"
           className="rounded-xl w-full"
           loading="lazy"

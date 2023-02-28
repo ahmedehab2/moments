@@ -59,11 +59,12 @@ export default function pinDetails({ user }) {
   return (
     <>
       <div className="flex lg:flex-row flex-col m-auto bg-white rounded-[30px] lg:max-w-7xl mt-10">
-        <div className="flex justify-center items-center md:items-start flex-intial">
+        <div className="max-w-lg lg:max-h-96 flex justify-center items-center md:items-start flex-intial m-10">
           <img
             src={pinDetail?.image && urlFor(pinDetail.image)}
             alt="pinImage"
-            className="rounded-3xl max-h-72"
+            className="rounded-3xl h-full w-full object-cover"
+            loading="lazy"
           />
         </div>
         <div className="w-full p-5 flex-1 relative">
@@ -100,7 +101,7 @@ export default function pinDetails({ user }) {
             <p className="text-lg font-normal">{pinDetail.postedBy.userName}</p>
           </Link>
           <h2 className="text-2xl mt-5">Comments</h2>
-          <div className="overflow-y-auto">
+          <div className="overflow-y-auto max-h-56">
             {pinDetail.comments?.map((comment) => (
               <div className="flex gap-2 bg-white mt-5 items-centers">
                 <img
